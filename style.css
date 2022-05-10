@@ -18,15 +18,19 @@ body {
 nav {
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: center;
     padding-top: 20px;
-    padding-left: 50px;
 }
 
 .navigation {
     display: flex;
     align-items: center;
-    gap: 400px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.hamburger {
+    display: none;
 }
 
 .navigation li {
@@ -35,16 +39,16 @@ nav {
     align-items: center;
 }
 
-.navigation .nav-left {
+.navigation .nav {
     display: flex;
     align-items: center;
 }
 
-.navigation .nav-left ul {
+.navigation .nav ul {
     display: flex;
 }
 
-.navigation .nav-left ul li a {
+.navigation .nav ul li a {
     padding-left: 50px;
     text-decoration: none;
     color: var(--MediumGray);
@@ -52,13 +56,14 @@ nav {
     cursor: pointer;
 }
 
-.navigation .nav-left ul li a:hover {
+.navigation .nav ul li a:hover {
     color: var(--AlmostBlack);
 }
 
-.navigation .nav-right {
+.navigation .nav-right ul {
     display: flex;
     align-items: center;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -70,7 +75,6 @@ nav {
     text-decoration: none;
     color: var(--MediumGray);
     font-size: 15px;
-    padding-right: 30px;
 }
 
 .navigation .nav-right button {
@@ -125,6 +129,8 @@ nav {
 }
 
 .dropdown {
+    width: auto;
+    height: auto;
     list-style: none;
     padding: 0.2em 0.5em;
     background-color: #fff;
@@ -137,7 +143,6 @@ nav {
     position: absolute;
     top: 4.5rem;
     left: 13%;
-    width: 10%;
     transform: rotateX(-50%);
     display: none;
 }
@@ -164,9 +169,9 @@ nav {
     gap: 10px;
     top: 4.5rem;
     left: 24%;
-    width: 10%;
     transform: rotateX(-50%);
     display: none;
+    width: auto;
 }
 
 .dropdown li {
@@ -235,7 +240,7 @@ article p {
 .left button {
     padding: 10px 15px;
     background-color: var(--AlmostBlack);
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     border-radius: 10px;
 }
 
@@ -254,6 +259,7 @@ main {
 
 .right {
     width: 50%;
+    padding-top: 70px;
 }
 
 .right img {
@@ -263,4 +269,128 @@ main {
     margin-left: auto;
     margin-right: auto;
     background-size: contain;
+}
+
+main .right .mobile-image {
+    display: none;
+}
+
+
+/* where reponsiveness starts */
+
+@media screen and (max-width: 1033px) {
+    article {
+        width: 417px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+    /* .navigation {
+        /* justify-content: space-between;
+        width: 90%; */
+}
+
+.hamburger {
+    display: block;
+}
+
+article h1 {
+    font-size: 50px;
+}
+
+.footer-images {
+    display: table;
+}
+
+.navigation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    display: flex;
+    z-index: 2;
+    display: block;
+}
+
+.nav ul {
+    height: 100%;
+    width: 375px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    /* padding-top: 100px;
+    padding-left: 20px; */
+}
+
+ul li a {
+    padding: 0.8rem 0;
+}
+
+@media screen and (max-width:375px) {
+    main .right .desktop-image {
+        display: none;
+    }
+    main .right {
+        width: 375px;
+        height: auto;
+        padding-top: 10px;
+    }
+    main .right .mobile-image {
+        display: block;
+        height: fit-content;
+        object-fit: fill;
+    }
+    main {
+        padding-block: 30px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .left {
+        width: auto;
+    }
+    article {
+        margin-top: 20px;
+        text-align: center;
+        align-items: center;
+        width: unset;
+        margin-left: unset;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .left {
+        width: 100%;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .right {
+        width: auto;
+    }
+    main .right .desktop-image {
+        display: none;
+    }
+    main .right .mobile-image {
+        display: block;
+        height: fit-content;
+        object-fit: fill;
+    }
+    article {
+        width: unset;
+        margin-left: unset;
+        margin-top: unset;
+        align-items: center;
+    }
+    article h1 {
+        font-size: 70px;
+    }
 }

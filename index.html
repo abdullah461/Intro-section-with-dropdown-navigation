@@ -18,30 +18,33 @@
 <body>
 
     <nav>
-        <div class="logo">
-            <img src="./images/logo.svg" alt="snap">
-        </div>
+
         <div class="navigation">
-            <div class="nav-left">
+            <div class="logo">
+                <img src="./images/logo.svg" alt="snap">
+            </div>
+
+            <div class="nav">
                 <ul>
                     <li class="features"><a href="#">Features</a></li>
                     <div class="caret"></div>
                     <div class="dropdown">
                         <div class="to-do">
                             <img src="./images/icon-todo.svg" alt="">
-                            <li>To-do list</li>
+                            <li> <a href="#">To-do list</a> </li>
+
                         </div>
                         <div class="calender">
                             <img src="./images/icon-calendar.svg" alt="">
-                            <li>Calender</li>
+                            <li> <a href="#">Calender</a> </li>
                         </div>
                         <div class="reminder">
                             <img src="./images/icon-reminders.svg" alt="">
-                            <li>Reminder</li>
+                            <li> <a href="">Reminder</a> </li>
                         </div>
                         <div class="planning">
                             <img src="./images/icon-planning.svg" alt="">
-                            <li>Planning</li>
+                            <li> <a href="#">Planning</a> </li>
                         </div>
                     </div>
                     <li class="company"><a href="#">Company</a></li>
@@ -53,19 +56,19 @@
                     </div>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">About</a></li>
+
+                    <li><a href="#">Login</a></li>
+                    <li class="btn"><a href="#">Register</a></li>
                 </ul>
             </div>
 
-            <div class="nav-right">
-                <ul>
-                    <li><a href="#">Login</a></li>
-                    <button><a href="#">Register</a></button>
-                </ul>
-            </div>
+            <img src="./images/icon-menu.svg" class="hamburger" alt="">
 
         </div>
     </nav>
     <main>
+
+
         <div class="left">
             <article>
                 <h1>
@@ -85,7 +88,9 @@
             </div>
         </div>
         <div class="right">
-            <img src="./images/image-hero-desktop.png" alt="">
+            <img src="./images/image-hero-desktop.png" alt="" class="desktop-image">
+            <img src="./images/image-hero-mobile.png" alt="" class="mobile-image">
+
         </div>
     </main>
     <script src="script.js"></script>
