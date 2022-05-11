@@ -285,6 +285,35 @@ main .right .mobile-image {
 }
 
 @media screen and (max-width: 900px) {
+    .dropdown img {
+        object-fit: contain;
+    }
+    .nav ul img {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: 20px;
+        left: 300px;
+    }
+    .dropdown ul li a {
+        /* padding-left: unset; */
+    }
+    .dropdown {
+        position: unset;
+        width: fit-content;
+    }
+    .dropdown2 {
+        width: fit-content;
+        position: unset;
+    }
+    .caret {
+        top: -25.8px;
+        left: 140px;
+    }
+    .caret2 {
+        top: -26.6px;
+        left: 140px;
+    }
     .nav-left,
     .nav-right {
         display: none;
@@ -318,12 +347,19 @@ article h1 {
     display: block;
 }
 
+.nav {
+    justify-content: right;
+}
+
+.logo {
+    display: none;
+}
+
 .nav ul {
-    height: 100%;
+    height: 100vh;
     width: 375px;
     background-color: #fff;
     flex-direction: column;
-    align-items: center;
     /* padding-top: 100px;
     padding-left: 20px; */
 }
@@ -333,6 +369,12 @@ ul li a {
 }
 
 @media screen and (max-width:375px) {
+    .nav ul {
+        width: 300px;
+    }
+    .nav ul img {
+        left: 200px;
+    }
     main .right .desktop-image {
         display: none;
     }
