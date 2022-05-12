@@ -18,18 +18,22 @@ body {
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-top: 20px;
+    padding: 20px 30px 0px 70px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .navigation {
     display: flex;
     align-items: center;
     width: 100%;
-    justify-content: space-evenly;
 }
 
 .hamburger {
+    display: none;
+}
+
+.close-menu {
     display: none;
 }
 
@@ -75,17 +79,6 @@ nav {
     text-decoration: none;
     color: var(--MediumGray);
     font-size: 15px;
-}
-
-.navigation .nav-right button {
-    background-color: var(--AlmostWhite);
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.navigation .nav-right button a {
-    text-decoration: none;
-    color: var(--MediumGray);
 }
 
 .caret {
@@ -288,15 +281,13 @@ main .right .mobile-image {
     .dropdown img {
         object-fit: contain;
     }
-    .nav ul img {
+    .nav ul .close-menu {
         position: relative;
         width: 40px;
         height: 40px;
         margin: 20px;
         left: 300px;
-    }
-    .dropdown ul li a {
-        /* padding-left: unset; */
+        display: block;
     }
     .dropdown {
         position: unset;
@@ -318,54 +309,39 @@ main .right .mobile-image {
     .nav-right {
         display: none;
     }
-    /* .navigation {
-        /* justify-content: space-between;
-        width: 90%; */
-}
-
-.hamburger {
-    display: block;
-}
-
-article h1 {
-    font-size: 50px;
-}
-
-.footer-images {
-    display: table;
-}
-
-.navigation {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    left: 0;
-    top: 0;
-    display: flex;
-    z-index: 2;
-    display: block;
-}
-
-.nav {
-    justify-content: right;
-}
-
-.logo {
-    display: none;
-}
-
-.nav ul {
-    height: 100vh;
-    width: 375px;
-    background-color: #fff;
-    flex-direction: column;
-    /* padding-top: 100px;
-    padding-left: 20px; */
-}
-
-ul li a {
-    padding: 0.8rem 0;
+    .hamburger {
+        display: block;
+    }
+    article h1 {
+        font-size: 50px;
+    }
+    .footer-images {
+        display: table;
+    }
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        left: 0;
+        top: 0;
+        display: flex;
+        z-index: 2;
+        display: none;
+        justify-content: right;
+    }
+    .navigation {
+        display: none;
+    }
+    .nav ul {
+        height: 100vh;
+        width: 375px;
+        background-color: #fff;
+        flex-direction: column;
+    }
+    ul li a {
+        padding: 0.8rem 0;
+    }
 }
 
 @media screen and (max-width:375px) {

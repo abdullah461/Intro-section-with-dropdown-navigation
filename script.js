@@ -4,6 +4,9 @@ const caret = document.querySelector(".caret");
 const caret2 = document.querySelector(".caret2");
 const features = document.querySelector(".features");
 const company = document.querySelector(".company");
+const nav = document.querySelector(".navigation");
+const OpenMenu = document.querySelector(".hamburger");
+const CloseMenu = document.querySelector(".close-menu")
 
 //adding click event to the  features and company & caret element
 features.addEventListener('click', () => {
@@ -26,4 +29,10 @@ company.addEventListener('click', () => {
 
     }
 });
-//
+// menu open and close
+OpenMenu.addEventListener('click', () => {
+    nav.style.display = "block";
+})
+CloseMenu.addEventListener('click', () => {
+    nav.style.display = "none";
+})
